@@ -1,0 +1,6 @@
+.detail {
+  margin-left: 20px;
+  text-align: left;
+  user-select: text;
+  cursor: text;
+}
