@@ -5,13 +5,16 @@ export const cvInfo =
         "firstname": 5,
         "lastname": "Bișag",
         "contact": {
-            "name":"alex"
-        }
-    }, 
+            "name": "alex"
+        },
+    },
     "contact": "gmail",
     "list": [
-        {"name": "asd"},
-        {"ionel": "iasd"}
+        {
+            "name": "asd",
+            "ionisca": "sigur ca da"
+        },
+        { "ionel": "iasd" }
     ]
 }
 
