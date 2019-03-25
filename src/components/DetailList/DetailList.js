@@ -17,48 +17,18 @@ class DetailList extends Component {
     }
 
     render() {
-        if (this.props.isRoot) {
+        if (this.state.expanded) {
             return (
-                <div className="list-container">
-                    {Object.entries(this.props.details).map(([key, element]) => {
-                        if (element.isList) {
-                            return <DetailList key={key} attribute={element.attribute} details={element.children}
-                                expanded={false} last={element.last} />
-                        } return <Detail key={key} attribute={element.attribute} value={element.value} last={element.last} />
-                    })}
+                <div>
+                    write logic to render details or other lists
                 </div>
             );
         } else {
-            if (this.state.expanded) {
-                return (
-                    <div className="margined list-container">
-                        <div>
-                            <p className="clickable" onClick={() => this.expand(false)}>"{this.props.attribute}":[{"{"}</p>
-                        </div>
-                        {Object.entries(this.props.details).map(([key, element]) => {
-                            if (element.isList) {
-                                return (
-                                    <div>
-                                        <DetailList key={key} attribute={element.attribute} details={element.children}
-                                            expanded={false} last={element.last} />
-                                    </div>
-                                );
-                            } return <Detail key={key} attribute={element.attribute} value={element.value} last={element.last} />
-                        })}
-                        <div>
-                            <p className="clickable" onClick={() => this.expand(false)}>{"}"}]{!this.props.last ? "," : ""}</p>
-                        </div>
-                    </div>
-                );
-            } else {
-                return (
-                    <div className="margined list-container">
-                        <p className="clickable" onClick={() => this.expand(true)}>
-                            "{this.props.attribute}":[] {!this.props.last ? "," : ""}
-                        </p>
-                    </div>
-                );
-            }
+            return (
+                <div>
+                    <p onClick={() => this.expand(true)}>"{this.props.name}":+</p>
+                </div>
+            );
         }
     }
 }

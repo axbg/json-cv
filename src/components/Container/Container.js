@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './index.css'
-import DetailList from '../DetailList/DetailList'
+import Detail from '../Detail/Detail'
 import './Constants'
 import { cvInfo } from './Constants';
 
@@ -17,7 +17,7 @@ class Container extends Component {
             <div className="container">
                 <div className="cv-container">
                     <p className="left-margined">{"{"}</p>
-                    <DetailList details={this.state.details} isRoot={true} />
+                    <Detail details={this.state.details} />
                     <p className="left-margined">{"}"}</p>
                 </div>
             </div>
