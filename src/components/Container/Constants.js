@@ -2,19 +2,15 @@
 export const cvInfo =
 {
     "resume": {
-        "firstname": 5,
+        "firstname": "Alexandru - Ștefan",
         "lastname": "Bișag",
-        "contact": {
-            "name": "alex"
-        },
-    },
-    "contact": "gmail",
-    "list": [
-        {
-            "name": "asd",
-            "ionisca": "sigur ca da"
-        },
-        { "ionel": "iasd" }
-    ]
+        "contact": [{
+            "facebook": "alexandrubstefan",
+            "gmail": "bisagalexstefan@gmail.com",
+            "linkedin": "bisagalexstefan",
+            "github": "axbg",
+            "gitlab": "axbg"
+        }]
+    }
 }
 

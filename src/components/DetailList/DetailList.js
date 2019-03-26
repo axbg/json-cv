@@ -29,7 +29,6 @@ class DetailList extends Component {
                                 return <DetailList key={index} details={detail} last />
                             }
                         } else {
-                            console.log(this.props.details.length);
                             if (index !== this.props.details.length - 1) {
                                 return <Detail key={index} details={{ "": detail }} />
                             } else {

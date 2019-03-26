@@ -17,7 +17,7 @@ class Container extends Component {
             <div className="container">
                 <div className="cv-container">
                     <p className="left-margined">{"{"}</p>
-                    <Detail details={this.state.details} />
+                    <Detail details={this.state.details}/>
                     <p className="left-margined">{"}"}</p>
                 </div>
             </div>

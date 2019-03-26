@@ -4,13 +4,6 @@ import './index.css'
 
 class Detail extends Component {
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            comma: ""
-        }
-    }
-
     escapeNumber(number) {
         if (isNaN(number)) {
             return "\"" + number + "\"";
@@ -46,8 +39,7 @@ class Detail extends Component {
                                         return <p key={index}>"{object}":{this.escapeNumber(this.props.details[object])}</p>
                                     }
                                 } else {
-                                    let g = object.length ? "\"" : "";
-                                    let d = object.length ? ":" : "";
+                                    let [g, d] = object.length ? ["\"", ":"] : ["", ""];
                                     return <div key={index}>
                                         <p>{g}{object}{g}{d}{"{"}</p>
                                         {content.map((element, index) => {
@@ -57,7 +49,7 @@ class Detail extends Component {
                                                 return <Detail key={index} details={element} last />
                                             }
                                         })}
-                                        <p>{"}"}{this.props.last ? "" : ","}</p>
+                                        <p>{"}"}{index === Object.keys(this.props.details).length - 1 ? "" : ","}</p>
                                     </div>
                                 }
                             }
