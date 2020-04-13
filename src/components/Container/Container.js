@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
-import './index.css'
 import Detail from '../Detail/Detail'
-import './Constants'
 import { cvInfo } from './Constants';
+import './index.css'
 
 class Container extends Component {
     constructor(props) {
@@ -17,7 +16,7 @@ class Container extends Component {
             <div className="container">
                 <div className="cv-container">
                     <p className="left-margined">{"{"}</p>
-                    <Detail details={this.state.details}/>
+                    <Detail details={this.state.details} expanded last />
                     <p className="left-margined">{"}"}</p>
                 </div>
             </div>

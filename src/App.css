@@ -8,10 +8,6 @@
   height: 100%;
 }
 
-.strip-attributes {
-  margin: 0;
-}
-
-.center {
-  text-align: center;
+p {
+  margin: 3px;
 }
